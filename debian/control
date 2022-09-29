@@ -1,0 +1,27 @@
+Source: golang-github-google-btree
+Section: devel
+Priority: optional
+Standards-Version: 4.4.1
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>, Tim Potter <tpot@hpe.com>,
+           Anthony Fok <foka@debian.org>
+Build-Depends: debhelper (>= 12~),
+               dh-golang,
+               golang-any
+Homepage: https://github.com/google/btree
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-google-btree
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-google-btree.git
+XS-Go-Import-Path: github.com/google/btree
+Testsuite: autopkgtest-pkg-go
+
+Package: golang-github-google-btree-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: BTree implementation for Go
+ This package provides an in-memory B-Tree implementation for Go, useful
+ as an ordered, mutable data structure.
+ .
+ The API is based off of the wonderful
+ http://godoc.org/github.com/petar/GoLLRB/llrb, and is meant to allow
+ btree to act as a drop-in replacement for gollrb trees.
